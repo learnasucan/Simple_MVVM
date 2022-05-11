@@ -30,11 +30,12 @@ class QuoteVC: UIViewController {
         tableview.register(nib, forCellReuseIdentifier: identifier)
         
         vm = QuoteViewModel()
-        
+        vm.getQuotes()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        
         vm.loadSuccess = {
             DispatchQueue.main.async {
                 self.tableview.reloadData()
