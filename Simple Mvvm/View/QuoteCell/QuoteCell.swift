@@ -19,7 +19,7 @@ class QuoteCell: UITableViewCell {
 
     func setupCell(_ quote: QuoteCellVM){
         quoteLabel.text = quote.quoteText
-        authorLabel.text = "--\(quote.quoteText)"
+        authorLabel.text = "--\(quote.authorText)"
     }
     
 }
