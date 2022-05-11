@@ -17,7 +17,7 @@
 //        return table
 //    }()
 //    
-//    var quotes = [Quotes]()
+//    var quotes = [Quote]()
 //    
 //    override func viewDidLoad() {
 //        super.viewDidLoad()

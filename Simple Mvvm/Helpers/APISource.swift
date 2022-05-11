@@ -9,7 +9,7 @@ import Foundation
 
 class APISource {
     
-    typealias handler = ([Quotes]) -> Void
+    typealias handler = ([Quote]) -> Void
     static func getQuotes(completion: @escaping handler) {
         let url = URL(string: "https://breaking-bad-quotes.herokuapp.com/v1/quotes/50")!
         
@@ -19,7 +19,7 @@ class APISource {
             } else {
                 do {
                     guard let data = data else {  return }
-                    let jsonData = try JSONDecoder().decode([Quotes].self, from: data)
+                    let jsonData = try JSONDecoder().decode([Quote].self, from: data)
                     print(data)
                     completion(jsonData)
                 } catch (let e) {

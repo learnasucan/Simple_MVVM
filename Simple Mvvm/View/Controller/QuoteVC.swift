@@ -47,18 +47,15 @@ class QuoteVC: UIViewController {
 
 extension QuoteVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return vm.quotes?.count ?? 0
+        return vm.quotesCellVM.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath) as! QuoteCell
-        guard let quotes = vm.quotes else { return  UITableViewCell() }
-        let quote = quotes[indexPath.row]
-        cell.quoteLabel.text = quote.quote
-        cell.authorLabel.text = "--\(quote.author)"
+        
+        let quote = vm.quotesCellVM[indexPath.row]
+        cell.setupCell(quote)
         
         return cell
     }
-    
-    
 }

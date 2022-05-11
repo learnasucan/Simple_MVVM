@@ -10,19 +10,21 @@ import Foundation
 typealias VoidHandler =  () -> Void
 
 protocol QuoteViewModelService {
-    var quotes: [Quotes]? { get }
+    var quotes: [Quote]? { get }
+    var quotesCellVM: [QuoteCellVM] { get }
     func getQuotes()
     var loadSuccess: VoidHandler? { get set }
 }
 
 class QuoteViewModel: QuoteViewModelService {    
     var loadSuccess: VoidHandler?
-    var quotes: [Quotes]?
+    var quotes: [Quote]?
+    var quotesCellVM = [QuoteCellVM]()
     
     func getQuotes() {
         APISource.getQuotes { [weak self] quotes in
-            print(quotes.count)
             self?.quotes = quotes
+            self?.quotesCellVM = quotes.map {QuoteCellVM(quoteText: $0.quote, authorText: $0.author)}
             self?.loadSuccess?()
         }
     }
