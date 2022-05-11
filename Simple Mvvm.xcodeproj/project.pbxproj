@@ -8,10 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		88101F1C282BB20B007E79E1 /* QuoteCellVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88101F1B282BB20B007E79E1 /* QuoteCellVM.swift */; };
+		88366679282BD5D600F399AC /* QuoteResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 88366678282BD5D600F399AC /* QuoteResponse.json */; };
+		8836667B282BD70800F399AC /* QuoteJsonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8836667A282BD70800F399AC /* QuoteJsonTests.swift */; };
 		885E59C1282A9E8D003E5862 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885E59C0282A9E8D003E5862 /* AppDelegate.swift */; };
 		885E59CC282A9E93003E5862 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 885E59CB282A9E93003E5862 /* Assets.xcassets */; };
 		885E59CF282A9E93003E5862 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 885E59CD282A9E93003E5862 /* LaunchScreen.storyboard */; };
-		885E59DA282A9E93003E5862 /* Simple_MvvmTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885E59D9282A9E93003E5862 /* Simple_MvvmTests.swift */; };
 		885E59E4282A9E93003E5862 /* Simple_MvvmUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885E59E3282A9E93003E5862 /* Simple_MvvmUITests.swift */; };
 		885E59E6282A9E93003E5862 /* Simple_MvvmUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885E59E5282A9E93003E5862 /* Simple_MvvmUITestsLaunchTests.swift */; };
 		885E59F3282ACDAD003E5862 /* QuoteDisplayVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885E59F2282ACDAD003E5862 /* QuoteDisplayVC.swift */; };
@@ -42,13 +43,14 @@
 
 /* Begin PBXFileReference section */
 		88101F1B282BB20B007E79E1 /* QuoteCellVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteCellVM.swift; sourceTree = "<group>"; };
+		88366678282BD5D600F399AC /* QuoteResponse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = QuoteResponse.json; sourceTree = "<group>"; };
+		8836667A282BD70800F399AC /* QuoteJsonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = QuoteJsonTests.swift; path = "Simple MVVMTests/QuoteJsonTests.swift"; sourceTree = SOURCE_ROOT; };
 		885E59BD282A9E8D003E5862 /* Simple Mvvm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Simple Mvvm.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		885E59C0282A9E8D003E5862 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		885E59CB282A9E93003E5862 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		885E59CE282A9E93003E5862 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		885E59D0282A9E93003E5862 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		885E59D5282A9E93003E5862 /* Simple MvvmTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Simple MvvmTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		885E59D9282A9E93003E5862 /* Simple_MvvmTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Simple_MvvmTests.swift; sourceTree = "<group>"; };
 		885E59DF282A9E93003E5862 /* Simple MvvmUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Simple MvvmUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		885E59E3282A9E93003E5862 /* Simple_MvvmUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Simple_MvvmUITests.swift; sourceTree = "<group>"; };
 		885E59E5282A9E93003E5862 /* Simple_MvvmUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Simple_MvvmUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -141,7 +143,8 @@
 		885E59D8282A9E93003E5862 /* Simple MvvmTests */ = {
 			isa = PBXGroup;
 			children = (
-				885E59D9282A9E93003E5862 /* Simple_MvvmTests.swift */,
+				88366678282BD5D600F399AC /* QuoteResponse.json */,
+				8836667A282BD70800F399AC /* QuoteJsonTests.swift */,
 			);
 			path = "Simple MvvmTests";
 			sourceTree = "<group>";
@@ -304,6 +307,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88366679282BD5D600F399AC /* QuoteResponse.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -336,7 +340,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				885E59DA282A9E93003E5862 /* Simple_MvvmTests.swift in Sources */,
+				8836667B282BD70800F399AC /* QuoteJsonTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
